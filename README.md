@@ -2,6 +2,29 @@
 
 A small, production-oriented support assistant built for the Senior AI Engineer machine round.
 
+
+## Screenshots
+
+A quick tour of the running application:
+
+### AI performance dashboard
+
+Shows local request metrics and the six curated deterministic retrieval and safety checks. The 6/6 result is not an evaluation of every live model response. Cost remains unconfigured until token prices are set.
+
+![AI performance dashboard](docs/screenshots/ai-dashboard.png)
+
+### Grounded chat and citations
+
+Answers display retrieved documentation evidence and a lexical retrieval match score. This score is not answer confidence or correctness.
+
+![Support chat with citations](docs/screenshots/chat-with-citations.png)
+
+### Conversation history
+
+Saved conversations can be reopened from the history view.
+
+![Conversation history](docs/screenshots/conversation-history.png)
+
 ## Features
 - FastAPI `POST /api/chat` endpoint with Pydantic request/response validation.
 - BM25-style lexical retrieval over the three supplied documentation sections, with inverse-document-frequency weighting, title boosts, and light inflection normalization.
