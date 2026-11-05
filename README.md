@@ -3,27 +3,11 @@
 A small, production-oriented support assistant built for the Senior AI Engineer machine round.
 
 
-## Screenshots
+## Project overview
 
-A quick tour of the running application:
+This project is a documentation-grounded support assistant built as a full-stack AI engineering assessment. It combines a FastAPI backend, a React chat interface, Groq-hosted language model responses, BM25-style document retrieval, and SQLite persistence. Answers show the supporting documentation passage so users can inspect why a response was returned.
 
-### AI performance dashboard
-
-Shows local request metrics and the six curated deterministic retrieval and safety checks. The 6/6 result is not an evaluation of every live model response. Cost remains unconfigured until token prices are set.
-
-![AI performance dashboard](docs/screenshots/ai-dashboard.png)
-
-### Grounded chat and citations
-
-Answers display retrieved documentation evidence and a lexical retrieval match score. This score is not answer confidence or correctness.
-
-![Support chat with citations](docs/screenshots/chat-with-citations.png)
-
-### Conversation history
-
-Saved conversations can be reopened from the history view.
-
-![Conversation history](docs/screenshots/conversation-history.png)
+The dashboard summarizes local request traffic, token usage, latency, feedback, and deterministic retrieval and safety checks. Its curated 6/6 score covers those fixed checks; it is not a live evaluation of every LLM answer. Retrieval match percentages describe lexical document matching, not answer confidence or correctness. Estimated cost is shown only after token prices are configured.
 
 ## Features
 - FastAPI `POST /api/chat` endpoint with Pydantic request/response validation.
