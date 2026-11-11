@@ -140,7 +140,7 @@ def metrics():
           sum(kind='failure') failures, avg(latency_ms) avg_latency_ms, sum(total_tokens) total_tokens,
           sum(estimated_cost_usd) estimated_cost_usd, avg(relevance) avg_relevance FROM events""").fetchone()
         feedback = dict(db.execute("SELECT vote,count(*) count FROM feedback GROUP BY vote").fetchall())
-        escalations = [dict(r) for r in db.execute("SELECT id,question,status,created_at FROM escalations ORDER BY created_at DESC LIMIT 20")]
+        escalations = [dict(r) for r in db.execute("SELECT id,conversation_id,question,status,created_at FROM escalations ORDER BY created_at DESC LIMIT 20")]
     result = dict(row)
     result["estimated_cost_usd"] = round(result["estimated_cost_usd"] or 0, 6)
     result["feedback"] = {"helpful": feedback.get("helpful", 0), "not_helpful": feedback.get("not_helpful", 0)}
@@ -153,3 +153,4 @@ def reset_metrics():
     initialize()
     with _connect() as db:
         db.execute("DELETE FROM events")
+
