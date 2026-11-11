@@ -98,3 +98,25 @@ The SQLite implementation and admin endpoints are for a local, single-tenant ass
 4. Ask `Will I receive a refund when I cancel?` and show the manual-review/no-guarantee evidence. The displayed retrieval match is lexical ranking evidence, not answer confidence or correctness.
 5. The cost tile says **Not configured** until both model token rates have been set in the backend environment.
 
+## Product screenshots
+
+<details>
+<summary>Workspace overview</summary>
+
+<img src="docs/screenshots/support-overview.png" alt="Support Agent Studio overview dashboard" width="1100">
+
+</details>
+
+<details>
+<summary>AI assistant</summary>
+
+<img src="docs/screenshots/ai-assistant.png" alt="Grounded AI support conversation with source evidence" width="1100">
+
+</details>
+
+<details>
+<summary>AI insights</summary>
+
+<img src="docs/screenshots/ai-insights.png" alt="AI usage, answer rate, feedback, and evaluation dashboard" width="1100">
+
+</details>
